@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DatingAPP.API.Controllers
-{  
-     [Authorize]
+{   
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -27,7 +27,7 @@ namespace DatingAPP.API.Controllers
             var values=await _context.Values.ToListAsync();
             return Ok(values);
         }
-
+                
         [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)

@@ -11,5 +11,8 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
   }
+  login() {
+    console.log(this.model);
+  }
 
 }
